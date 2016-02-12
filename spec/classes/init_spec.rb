@@ -8,6 +8,7 @@ describe 'demo_test' do
       should contain_user('demo').with(
         'ensure'  => 'present',
         'gid'     => 'demo',
+        'home'    => '/home/demo',
       )
     }
 
