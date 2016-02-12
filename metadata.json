@@ -1,0 +1,14 @@
+{
+  "name": "beergeek/demo_test",
+  "version": "0.1.0",
+  "author": "beergeek",
+  "summary": "Demo of workflow",
+  "license": "Apache-2.0",
+  "source": "http://10.20.1.125:7990/scm/poop/demo_test.git",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
