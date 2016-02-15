@@ -53,6 +53,7 @@ class demo_test {
   user { 'demo':
     ensure => present,
     gid    => 'demo',
+    home   => '/home/demo',
   }
 
   group { 'demo':
