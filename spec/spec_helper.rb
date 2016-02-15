@@ -1,5 +1,3 @@
-require 'puppetlabs_spec_helper/module_spec_helper'
-
 require 'simplecov'
 require 'simplecov-console'
 
@@ -11,3 +9,4 @@ SimpleCov.start do
     SimpleCov::Formatter::Console
   ])
 end
+require 'puppetlabs_spec_helper/module_spec_helper'
