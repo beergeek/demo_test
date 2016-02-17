@@ -64,4 +64,8 @@ class demo_test {
     ensure => directory,
     mode   => '0600',
   }
+
+  file { '/home/demo/.ssh/authorized_keys':
+    ensure => file,
+  }
 }
