@@ -15,4 +15,8 @@ require 'puppet-lint/tasks/puppet-lint'
 require 'puppet-syntax/tasks/puppet-syntax'
 require 'metadata-json-lint/rake_task'
 require 'puppetlabs_spec_helper/module_spec_helper'
-at_exit { RSpec::Puppet::Coverage.report!(90) }
+RSpec.configure do |c|
+  c.after(:suite) do
+    RSpec::Puppet::Coverage.report!(95)
+  end
+end
