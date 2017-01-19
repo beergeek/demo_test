@@ -45,8 +45,6 @@
 class demo_test {
 
   File {
-    owner => 'demo',
-    group => 'demo',
     mode  => '0600',
   }
 
@@ -66,6 +64,9 @@ class demo_test {
   }
 
   file { '/home/demo/.ssh/authorized_keys':
-    ensure => file,
+    ensure  => file,
+    owner => 'demo',
+    group => 'demo',
   }
+
 }
