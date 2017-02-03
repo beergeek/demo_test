@@ -3,7 +3,7 @@ describe 'demo_test' do
 
   context 'with defaults for all parameters' do
     it { should contain_class('demo_test') }
-    it { is_expected.to satisfy_file_resource_requirements }
+    it_should_behave_like 'Security Tests'
 
     it {
       should contain_user('demo').with(

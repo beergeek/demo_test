@@ -45,6 +45,8 @@
 class demo_test {
 
   File {
+    owner => 'demo',
+    group => 'demo',
     mode  => '0600',
   }
 
