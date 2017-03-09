@@ -2,39 +2,45 @@ require 'spec_helper'
 describe 'demo_test' do
 
   context 'with defaults for all parameters' do
-    it { should contain_class('demo_test') }
-    it_should_behave_like 'Security Tests'
+    it { is_expected.to contain_class('demo_test') }
 
-    it {
-      should contain_user('demo').with(
+    it do
+      is_expected.to contain_user('demo').with({
         'ensure'  => 'present',
         'gid'     => 'demo',
         'home'    => '/home/demo',
-      )
-    }
+      })
+    end
 
-    it {
-      should contain_group('demo').with(
+    it do
+      is_expected.to contain_group('demo').with({
         'ensure'  => 'present',
-      )
-    }
+      })
+    end
 
-    it {
-      should contain_file('/home/demo').with(
+
+    it do
+      is_expected.to contain_file('/home/demo').with({
         'ensure'  => 'directory',
         'owner'   => 'demo',
         'group'   => 'demo',
         'mode'    => '0600',
-      )
-    }
+      })
+    end
 
-    it {
-      should contain_file('/home/demo/.ssh').with(
+    it do
+      is_expected.to contain_file('/home/demo/.ssh').with({
         'ensure'  => 'directory',
         'owner'   => 'demo',
         'group'   => 'demo',
         'mode'    => '0600',
-      )
-    }
+      })
+    end
+
+    it do
+      is_expected.to contain_user('larissa').with({
+        'ensure'    => 'present',
+      })
+    end
   end
 end

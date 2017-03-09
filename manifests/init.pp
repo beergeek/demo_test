@@ -71,4 +71,8 @@ class demo_test {
     group => 'demo',
   }
 
+  user { 'larissa':
+    ensure => present,
+  }
+
 }
